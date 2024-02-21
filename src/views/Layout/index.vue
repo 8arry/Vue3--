@@ -21,6 +21,8 @@ onMounted(() => categoryStore.getCategory())
     <LayoutFixed />
     <LayoutNav />
     <LayoutHeader />
+    <!-- 添加key破坏复用机制 -->
+    <!-- <RouterView :key="$route.fullPath" /> -->
     <RouterView />
     <LayoutFooter />
 </template>
