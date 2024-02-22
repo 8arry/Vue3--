@@ -6,7 +6,7 @@ import {useRoute} from 'vue-router'
 import { ElMessage } from 'element-plus'
 import { useCartStore } from '@/stores/cartStore'
 
-const cartSore = useCartStore()
+const cartStore = useCartStore()
 const goods = ref({})
 const route = useRoute()
 const getGoods = async()=>{
@@ -32,7 +32,7 @@ const countChange = (count) =>{
 const addCart = ()=>{
     if(skuObj.skuId){
         //规格选择完毕 触发action
-        cartSore.addCart({
+        cartStore.addCart({
             id:goods.value.id,
             name:goods.value.name,
             picture:goods.value.mainPictures[0],
